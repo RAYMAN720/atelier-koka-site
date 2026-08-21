@@ -1,0 +1,1 @@
+Shared navigation/footer patterns are duplicated intentionally so the starter runs without a template engine. In production, move them into components/partials.
