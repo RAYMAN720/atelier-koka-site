@@ -1,0 +1,33 @@
+# Sveltia CMS (Decap-compatible). Login = GitHub fine-grained token, no server needed.
+backend:
+  name: github
+  repo: RAYMAN720/atelier-koka-site
+  branch: main
+  commit_messages:
+    create: "Flash: add {{slug}}"
+    update: "Flash: update {{slug}}"
+    delete: "Flash: remove {{slug}}"
+media_folder: assets/uploads
+public_folder: assets/uploads
+publish_mode: simple
+collections:
+  - name: flash
+    label: Flash gallery
+    files:
+      - name: flash
+        label: Flash sheets (homepage)
+        file: content/flash.json
+        format: json
+        fields:
+          - label: Flash designs (newest first)
+            name: flash
+            widget: list
+            summary: "{{fields.title}}"
+            fields:
+              - {label: Image, name: image, widget: image, hint: "JPG/PNG/WebP, under 1.5 MB, square works best"}
+              - {label: Title (EN), name: title, widget: string}
+              - {label: Titre (FR), name: title_fr, widget: string, required: false}
+              - {label: Short text (EN), name: text, widget: text}
+              - {label: Texte court (FR), name: text_fr, widget: text, required: false}
+              - {label: Image description for screen readers, name: alt, widget: string}
+              - {label: Instagram post link, name: link, widget: string, required: false, pattern: ["^https://www\\.instagram\\.com/.+", "Must be an instagram.com link"]}

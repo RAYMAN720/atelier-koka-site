@@ -358,3 +358,25 @@ document.querySelectorAll('[data-contact-form]').forEach(form => {
     form.reset();
   });
 });
+
+/* street theme: light-leak + hero parallax */
+(()=>{if(matchMedia('(prefers-reduced-motion:reduce)').matches)return;
+const leak=document.createElement('div');leak.className='leak';document.body.appendChild(leak);
+const art=document.querySelector('.hero-art');
+addEventListener('pointermove',e=>{const x=e.clientX,y=e.clientY;leak.style.setProperty('--mx',x+'px');leak.style.setProperty('--my',y+'px');
+if(art){art.style.setProperty('--px',(x/innerWidth-.5).toFixed(2));art.style.setProperty('--py',(y/innerHeight-.5).toFixed(2));}},{passive:true});})();
+
+/* Flash gallery driven by content/flash.json (edited through /admin) */
+(()=>{const grid=document.querySelector('#work .grid-3');if(!grid)return;
+const safeImg=s=>typeof s==='string'&&/^\/?assets\/[\w\-./]+\.(jpe?g|png|webp|gif|avif)$/i.test(s)?s.replace(/^\//,''):null;
+const safeLink=s=>typeof s==='string'&&/^https:\/\/www\.instagram\.com\//.test(s)?s:null;
+let data=[];
+const el=(t,c,x)=>{const n=document.createElement(t);if(c)n.className=c;if(x!=null)n.textContent=x;return n};
+function render(){const fr=document.documentElement.lang==='fr';grid.replaceChildren();
+data.slice(0,6).forEach((f,i)=>{const src=safeImg(f.image);if(!src)return;const card=el('article','card');
+const media=el(safeLink(f.link)?'a':'div','card-media');const l=safeLink(f.link);if(l){media.href=l;media.target='_blank';media.rel='noopener noreferrer'}
+const img=new Image();img.src=src;img.alt=String(f.alt||f.title||'');img.loading='lazy';img.width=640;img.height=640;media.append(img);
+const body=el('div','card-body'),meta=el('div','meta');meta.append(el('span',null,'Flash / '+String(i+1).padStart(2,'0')),el('span',null,'↗'));
+body.append(meta,el('h3',null,(fr&&f.title_fr)||f.title||''),el('p',null,(fr&&f.text_fr)||f.text||''));card.append(media,body);grid.append(card)})}
+fetch('content/flash.json',{cache:'no-cache'}).then(r=>r.ok?r.json():Promise.reject()).then(j=>{if(Array.isArray(j.flash)&&j.flash.length){data=j.flash;render();
+new MutationObserver(render).observe(document.documentElement,{attributes:true,attributeFilter:['lang']})}}).catch(()=>{})})();

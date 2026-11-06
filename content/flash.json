@@ -1,0 +1,31 @@
+{
+  "flash": [
+    {
+      "title": "Faces & stories",
+      "title_fr": "Visages & histoires",
+      "text": "Expressive masks. A play of line, shape and negative space.",
+      "text_fr": "Masques expressifs. Un jeu de lignes, de formes et d'espaces négatifs.",
+      "image": "assets/instagram/flash-masks.jpg",
+      "alt": "Faces & stories",
+      "link": "https://www.instagram.com/atelier_koka.fribourg/p/DeFFtEEojpD/"
+    },
+    {
+      "title": "In movement",
+      "title_fr": "En mouvement",
+      "text": "Dancing silhouettes, bold contrasts and geometric detail.",
+      "text_fr": "Silhouettes dansantes, contrastes forts et détails géométriques.",
+      "image": "assets/instagram/flash-dancers.jpg",
+      "alt": "In movement",
+      "link": "https://www.instagram.com/atelier_koka.fribourg/p/DeMZOVYo99U/"
+    },
+    {
+      "title": "Forms & roots",
+      "title_fr": "Formes & racines",
+      "text": "A hornbill and a familiar roofline, reduced to their essentials.",
+      "text_fr": "Un calao et un toit familier, réduits à l'essentiel.",
+      "image": "assets/instagram/flash-hornbill.jpg",
+      "alt": "Forms & roots",
+      "link": "https://www.instagram.com/atelier_koka.fribourg/p/DeeTdZjI0OE/"
+    }
+  ]
+}
