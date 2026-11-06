@@ -57,3 +57,67 @@ h1{font-family:Georgia,'Times New Roman',serif;font-size:clamp(54px,10vw,138px);
 .notice{padding:14px 16px;border:1px solid var(--ink);color:var(--muted);font-size:12px}.social-big{font-family:Georgia,serif;font-size:clamp(35px,6vw,85px);text-transform:uppercase;letter-spacing:-.05em;border-bottom:1px solid currentColor;display:inline-block}.smallcaps{text-transform:uppercase;letter-spacing:.14em;font-size:10px;font-weight:900}.map-card{border:1px solid var(--ink);padding:28px;background:var(--paper-2)}
 @media(max-width:850px){.hero-grid,.split,.detail-grid,.poster-grid{grid-template-columns:1fr}.hero-logo-wrap{grid-template-columns:140px 1fr}.grid-3{grid-template-columns:1fr 1fr}.event-row{grid-template-columns:1fr}.event-row .pill{justify-self:start}.nav-links{display:none;position:absolute;left:0;right:0;top:75px;background:var(--paper);padding:22px var(--pad);flex-direction:column;align-items:flex-start;border-bottom:1px solid var(--ink)}.nav-links.open{display:flex}.lang-switch{margin-top:4px}.menu-btn{display:block}.hero::after{display:none}.footer-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:560px){.grid-3,.grid-2,.footer-grid,.form-grid,.detail-gallery{grid-template-columns:1fr}.field.full{grid-column:auto}.topbar{font-size:9px}.section-head{align-items:start;flex-direction:column}.hero{min-height:auto}.hero-logo-wrap{grid-template-columns:105px 1fr}.brand{font-size:15px}.brand-logo{width:42px;height:42px}.nav{padding-top:10px;padding-bottom:10px}}
+
+/* Atelier Koka: palette and composition drawn from the original flash sheets. */
+:root{--ink:#20221e;--paper:#f3f0e7;--paper-2:#e8e5da;--red:#566147;--red-dark:#3e4934;--muted:#686c61;--line:rgba(32,34,30,.22);--max:1380px;--pad:clamp(22px,5vw,76px)}
+body::before{opacity:.055;z-index:40}
+::selection{background:#cfd5c0;color:var(--ink)}
+a,button{-webkit-tap-highlight-color:transparent}
+a:focus-visible,button:focus-visible{outline:2px solid var(--red);outline-offset:5px}
+img{height:auto}
+section[id]{scroll-margin-top:100px}
+.topbar{background:var(--ink);padding-top:7px;padding-bottom:7px;font-size:9px;font-weight:500;letter-spacing:.18em}
+.site-header{background:rgba(243,240,231,.97);border-bottom:1px solid var(--line)}
+.nav{padding-top:16px;padding-bottom:16px;gap:20px}
+.brand{font-family:Arial,Helvetica,sans-serif;font-size:17px;letter-spacing:.05em;white-space:nowrap}
+.brand-logo{width:47px;height:47px;border:0;mix-blend-mode:multiply;filter:none}
+.nav-links{font-size:10px;letter-spacing:.1em;gap:22px}
+.nav-cta{border-radius:2px;padding:11px 15px}
+.lang-switch{border-radius:2px}.lang-switch button{min-width:32px;padding:8px;font-weight:600}
+.skip-link{position:fixed;top:-100px;left:20px;z-index:100;background:var(--ink);color:var(--paper);padding:12px 20px}.skip-link:focus{top:12px}
+h1,h2,h3{letter-spacing:-.055em;font-weight:400;text-transform:none;line-height:1.04}
+h2{font-size:clamp(40px,4.7vw,68px)}h3{font-size:clamp(26px,2.5vw,36px)}
+h1 em,h2 em{font-weight:400;color:var(--red)}
+.kicker{font-size:10px;line-height:1.7;letter-spacing:.15em;font-weight:600;margin-bottom:18px}
+.hero{min-height:0;padding:62px 0 64px;border:0}
+.hero::after{display:none}
+.hero-grid{width:100%;grid-template-columns:1.05fr 1fr;gap:clamp(32px,6vw,88px);align-items:center}
+.hero-logo-wrap{display:flex;gap:14px;margin-bottom:30px}
+.hero-logo-wrap .hero-logo{width:54px;height:54px;border:0;border-radius:0;box-shadow:none;transform:none;mix-blend-mode:multiply}
+.hero-logo-wrap .kicker{margin:0;font-size:9px;color:var(--muted)}
+.hero h1{font-size:clamp(66px,7.5vw,108px);line-height:.98;max-width:none;letter-spacing:-.065em}
+.hero-copy{font-family:Arial,Helvetica,sans-serif;font-size:15px;line-height:1.8;max-width:400px;color:var(--muted);margin:25px 0}
+.btn-row{align-items:center;gap:14px;margin-top:25px}
+.btn{gap:24px;border-radius:2px;font-size:10px;padding:16px 20px;letter-spacing:.08em;font-weight:600;text-transform:uppercase;min-height:46px;cursor:pointer;transition:background .18s,transform .18s}
+.btn:hover{transform:translateY(-2px)}.btn.primary:hover{background:var(--red);border-color:var(--red)}
+.text-btn{padding-left:0;padding-right:0;border-color:transparent}.text-btn:hover{border-bottom-color:var(--ink)}
+.hero-signature{display:flex;align-items:center;gap:18px;margin-top:36px;padding-top:18px;border-top:1px solid var(--line);max-width:400px;font-size:10px;color:var(--muted)}
+.hero-signature span:first-child{letter-spacing:.14em;font-weight:700;color:var(--ink)}
+.hero-art{position:relative;padding:18px 20px 14px;border:1px solid var(--ink);background:#eae7dc;transform:rotate(2deg);box-shadow:9px 9px 0 #dcded0;margin:8px 10px 12px 0}
+.art-caption{font-family:monospace;font-size:9px;display:flex;justify-content:space-between;align-items:center;gap:12px;letter-spacing:.09em;margin-bottom:16px}
+.art-caption.bottom{margin:14px 0 0;font-size:9px}
+.hero-sheet{display:block;background:#fff}.hero-sheet img{width:100%;aspect-ratio:1;object-fit:contain;transition:transform .3s}.hero-sheet:hover img{transform:scale(.97)}
+.hero-stamp{position:absolute;bottom:60px;left:-22px;margin:0;border:1px solid var(--ink);background:var(--red);color:var(--paper);padding:12px 18px;transform:rotate(-6deg);font-family:monospace;font-size:9px;font-weight:400;box-shadow:3px 3px 0 var(--paper)}
+.marquee{padding:15px 0;background:transparent;color:var(--ink);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.marquee-track{font-family:Arial,Helvetica,sans-serif;font-size:12px;letter-spacing:.2em;font-weight:500;animation:none;display:flex;justify-content:center}
+.marquee-track span{display:flex;align-items:center;gap:32px;margin:0}.marquee-track b{font-size:22px;font-weight:400}
+.section{padding:90px 0}.section-head{align-items:end;margin-bottom:38px;gap:55px}.section-head>div{flex:1}.section-head p{flex:1;max-width:360px;font-size:14px;line-height:1.8}
+.poster-grid{grid-template-columns:1fr 1fr;gap:22px}.poster{min-height:295px;padding:34px;border:0}.poster h3{margin-top:24px}.poster p{font-family:Arial,Helvetica,sans-serif;font-size:13px;line-height:1.8;max-width:350px}.poster .number{font-size:110px;right:18px;bottom:20px;opacity:.15}.poster.red{background:#e0e3d5;color:var(--ink)}.poster.ink{background:#292d26;color:var(--paper)}
+.section.ink{background:#e9e7dc;color:var(--ink)}.section.ink .section-head p,.section.ink .lede{color:var(--muted)}
+.grid-3{gap:24px}.card{background:transparent;border:0;box-shadow:none;border-radius:0}.card-media{display:block;background:#fff;aspect-ratio:1;overflow:hidden;border:1px solid var(--line)}
+.card-media img{width:100%;height:100%;object-fit:contain;transition:transform .25s}.card-media:hover img{transform:scale(1.03)}.card-media::after{display:none}.card-media.logo-media{padding:0;display:block;background:#fff}.card-media.logo-media img{border-radius:0;filter:none}
+.card-body{padding:18px 0 0}.card-body h3{font-size:29px}.meta{color:var(--muted);font-size:9px}.card-body p{font-size:13px;line-height:1.75;color:var(--muted);max-width:300px}
+#work .btn-row{margin-top:35px}.gallery-note{font-size:12px;color:var(--muted)}
+.split{gap:clamp(30px,6vw,80px);align-items:center}.lede{font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:1.8;color:var(--muted)}.artist-section p:not(.lede){font-size:14px;color:var(--muted);line-height:1.8}
+.artist-section h2{font-size:clamp(40px,4.7vw,65px)}
+.tattoo-pair{display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start}.tattoo-photo{display:block}.tattoo-photo img{aspect-ratio:3/4;object-fit:cover;width:100%;border:1px solid var(--line)}.tattoo-photo:nth-child(2){margin-top:55px}.tattoo-pair .smallcaps{grid-column:1/-1;color:var(--muted);font-size:9px;font-weight:500}
+.instagram-band{padding:48px 0;background:#292d26!important;color:var(--paper)}.social-big{font-size:clamp(25px,4.5vw,64px);text-transform:none;letter-spacing:-.04em;margin:14px 0 0;border:0;overflow-wrap:anywhere}.social-big span{display:inline-block;font-family:Arial,sans-serif;font-size:.65em;vertical-align:middle;margin-left:12px}.instagram-band .lede{color:#ced2c2;font-size:14px;max-width:none;margin-top:18px}
+.booking-guide{border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);padding:25px 0 12px}.booking-guide>.smallcaps{font-weight:500;color:var(--muted)}.booking-guide ol{list-style:none;padding:0;margin:10px 0}.booking-guide li{display:flex;gap:24px;padding:20px 0;border-bottom:1px solid var(--line)}.booking-guide li:last-child{border:0}.booking-guide li>span{font-family:monospace;font-size:12px;color:var(--red);padding-top:4px}.booking-guide h3{font-size:26px;letter-spacing:-.035em}.booking-guide p{font-size:13px;line-height:1.7;color:var(--muted);margin:8px 0 0}.booking-guide .booking-note{border-top:1px solid var(--line);padding-top:15px;font-size:11px}.booking-location{margin-top:32px;color:var(--muted);font-weight:500}
+.footer{background:var(--paper);color:var(--ink);padding:40px 0 24px}.footer small,.footer p{color:var(--muted);font-size:11px;line-height:1.8}.footer strong{font-size:10px;text-transform:uppercase;letter-spacing:.12em}.footer-grid{grid-template-columns:1.4fr .7fr 1fr;gap:24px}.footer .container:last-child{margin-top:25px}.footer .brand-logo{mix-blend-mode:multiply}.footer a{overflow-wrap:anywhere}
+.page-hero{padding:70px 0 55px}.page-hero h1{font-size:clamp(56px,7vw,98px)}.page-hero .lede{max-width:680px}.detail-copy p{font-family:Arial,Helvetica,sans-serif;font-size:15px;line-height:1.9;color:var(--muted)}
+.identity-poster{margin:0;max-width:400px;justify-self:center;border:1px solid var(--line);background:var(--paper-2);padding:16px;transform:rotate(2deg)}.identity-poster img{width:100%;max-height:490px;object-fit:contain}.identity-poster figcaption{font-family:monospace;font-size:10px;margin-top:12px;text-align:center}
+.detail-gallery{grid-template-columns:repeat(3,1fr);gap:22px}.portfolio-piece{display:block;background:#fff;border:1px solid var(--line)}.portfolio-piece img{width:100%;aspect-ratio:1;object-fit:contain;transition:transform .25s}.portfolio-piece:hover img{transform:scale(.96)}
+@media(min-width:851px) and (max-width:1100px){.nav{gap:15px}.nav-links{gap:12px}.brand{font-size:14px}.nav .brand-logo{width:38px;height:38px}.nav-cta{padding:9px}.hero-grid{gap:30px}}
+@media(max-width:850px){.nav{position:relative}.nav-links{top:100%;gap:20px;padding:24px var(--pad)}.nav-links a{padding:8px 0}.nav-links .nav-cta{padding:10px 16px}.hero{padding:42px 0 50px}.hero-grid{grid-template-columns:1fr 1fr;gap:30px}.hero h1{font-size:clamp(50px,8.3vw,76px)}.hero-logo-wrap{margin-bottom:24px}.hero-logo-wrap .hero-logo{display:none}.hero-copy{font-size:13px}.hero .btn-row{gap:8px}.hero .btn{font-size:9px;padding:13px;gap:12px}.hero .text-btn{padding-left:0}.hero-signature{flex-direction:column;align-items:start;gap:8px;margin-top:22px}.hero-art{padding:12px}.art-caption{font-size:8px;letter-spacing:0}.art-caption.bottom{font-size:8px}.hero-stamp{font-size:8px;padding:9px;left:-12px;bottom:35px}.section{padding:64px 0}.section-head{gap:28px}.section-head p{font-size:13px}.poster-grid{grid-template-columns:1fr 1fr}.poster{padding:25px;min-height:310px}.grid-3{grid-template-columns:repeat(3,1fr);gap:16px}.card-body h3{font-size:24px}.card-body p{font-size:12px}.split,.detail-grid{grid-template-columns:1fr;gap:38px}.tattoo-pair{max-width:560px}.detail-gallery{grid-template-columns:repeat(2,1fr)}.footer-grid{grid-template-columns:1fr 1fr}.footer-grid>div:first-child{grid-column:1/-1}.instagram-band{padding:38px 0}}
+@media(max-width:560px){.topbar{font-size:8px;letter-spacing:.08em;gap:15px}.nav{padding-top:12px;padding-bottom:12px}.brand{font-size:15px}.brand-logo{width:39px;height:39px}.menu-btn{font-size:24px;min-width:44px;min-height:44px}.hero{padding-top:34px}.hero-grid{grid-template-columns:1fr;gap:36px}.hero h1{font-size:clamp(64px,16vw,88px)}.hero-logo-wrap{margin-bottom:22px}.hero-logo-wrap .hero-logo{display:block;width:44px;height:44px}.hero-copy{font-size:14px;max-width:350px}.hero-signature{flex-direction:row;gap:14px;align-items:center}.hero-art{margin:0 8px 8px;max-width:400px;padding:14px}.hero-stamp{bottom:48px}.hero .btn{font-size:10px;padding:15px}.hero .text-btn{padding-left:0}.marquee-track{justify-content:start;font-size:10px}.marquee-track span{gap:23px}.marquee-track b{font-size:18px}.section-head{align-items:start;flex-direction:column;gap:20px}.section-head p{max-width:none}.section h2{font-size:42px}.poster-grid{grid-template-columns:1fr}.poster{min-height:270px}.grid-3{grid-template-columns:1fr;gap:32px}.card-body h3{font-size:30px}.card-body p{max-width:none;font-size:13px}.gallery-note{font-size:11px}.detail-gallery{grid-template-columns:1fr 1fr;gap:10px}.social-big{font-size:clamp(24px,6.5vw,36px)}.social-big span{margin-left:4px}.footer-grid{grid-template-columns:1fr 1fr;gap:24px}.footer .brand{font-size:16px}.footer p{font-size:10px}.footer small{font-size:10px}.booking-guide li{gap:18px}.tattoo-pair{gap:12px}.artist-section h2{font-size:42px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
